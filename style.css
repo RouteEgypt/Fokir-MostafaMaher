@@ -1,0 +1,784 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Roboto", sans-serif;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.clear-fix {
+    clear: both;
+}
+
+/* == Header ==*/
+.head h2,
+.head h2 {
+    font-size: 35px;
+    padding: 20px 0;
+    width: fit-content;
+    margin: auto;
+    position: relative;
+    border-bottom: 1px solid #ff305b;
+}
+h2::before,
+.head h2::before,
+h2::after,
+.head h2::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff305b;
+}
+h2::after,
+.head h2::after {
+    top: 110%;
+}
+/* == Header ==*/
+
+/* Start Home -------------------------------------------- ----*/
+#home {
+    height: 100vh;
+    background-image: url("./img/slider/slider-01.jpg");
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+}
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-color: #000000be;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+/* -- Navbar --*/
+#home .navbar {
+    width: 90%;
+    margin: auto;
+    padding: 30px;
+}
+.navbar .logo {
+    float: left;
+}
+.navbar .logo a {
+    padding: 10px;
+    border: 7px solid;
+    border-color: #ff305b transparent transparent #ff305b;
+    font-size: 40px;
+    font-weight: bold;
+    color: #ff305b;
+}
+.navbar ul {
+    float: right;
+    margin-top: 10px;
+}
+.navbar ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+.navbar ul li a {
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+.navbar ul li a:hover {
+    color: #ff305b;
+}
+.navbar ul li a.active,
+#our-portfolio .content .btn.active {
+    color: #ff305b;
+}
+/* -- Navbar --*/
+/* -- Content --*/
+#home .content {
+    text-align: center;
+    padding-top: 150px;
+}
+#home .content p {
+    font-size: 25px;
+}
+#home .content h1 {
+    font-size: 70px;
+    color: #ff305b;
+    margin: 15px 0;
+}
+#home .content .mark-1 {
+    width: fit-content;
+    padding: 1px 20px;
+    margin: auto;
+    border-right: 2px solid #fff;
+}
+/* -- Content --*/
+/* -- Media --*/
+@media screen and (max-width: 975px) {
+    .navbar {
+        text-align: center;
+    }
+    .navbar .logo {
+        float: none;
+        margin-bottom: 30px;
+    }
+    .navbar ul {
+        float: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    #home .content h1 {
+        font-size: 50px;
+    }
+}
+/* -- Media --*/
+
+/* End Home    -------------------------------------------- ----*/
+/* Start About -------------------------------------------- ----*/
+#about {
+    padding: 100px 0;
+}
+#about .container {
+    width: 95%;
+    margin: auto;
+}
+/* -- Profile Image -- */
+#about .container .box {
+    width: 35%;
+    float: left;
+}
+#about .container .box .box-prof {
+    width: 90%;
+    margin-left: auto;
+    box-shadow: 0 0 0 8px #555 inset;
+    border-radius: 10px;
+}
+#about .container .box .box-prof .img-overlay {
+    border-radius: 10px;
+    overflow: hidden;
+    transform: translate(30px, 30px);
+}
+#about .box .box-prof img {
+    width: 100%;
+}
+
+#about .box .prof-overlay {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: 0.5s;
+}
+#about .box:hover .prof-overlay {
+    top: 0;
+}
+#about .box .prof-overlay .social-icon {
+    width: fit-content;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#about .box .prof-overlay span,
+.footer .social-icon span {
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-color: #f1f1f1;
+    float: left;
+    margin-inline: 5px;
+    transition: 0.3s;
+}
+
+#about .box .prof-overlay span:hover,
+.footer .social-icon span:hover {
+    background-color: rgb(185, 40, 40);
+}
+
+/* -- Profile Image -- */
+/* -- content --*/
+#about .container .content {
+    width: 65%;
+    float: right;
+    padding-left: 80px;
+}
+#about .content div span {
+    width: 4px;
+    margin-top: 5px;
+    margin-right: 10px;
+    height: 25px;
+    background-color: #ff305b;
+    float: left;
+}
+#about .content div p {
+    font-size: 30px;
+    font-weight: 900;
+    color: #000;
+    float: left;
+}
+#about .content > p {
+    font-size: 15px;
+    padding-bottom: 25px;
+    border-bottom: 1px dashed #99999999;
+    border-top-color: transparent;
+    line-height: 1.5;
+    margin-block: 15px;
+    color: #555;
+}
+
+#about .content ul {
+    margin-bottom: 10px;
+}
+#about .content ul li {
+    margin-block: 10px;
+    font-size: 15px;
+    font-weight: 700;
+}
+#about .content ul li span {
+    color: #555;
+    font-weight: normal;
+}
+#about .content ul li:nth-child(2n + 1) {
+    float: left;
+    width: 45%;
+}
+#about .content ul li:nth-child(2n) {
+    float: left;
+    width: 55%;
+}
+
+#about .content button {
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #ff305b;
+    border: none;
+    border-radius: 5px;
+}
+
+#about .content button:hover {
+    background-color: #ec2403;
+}
+#about .content button:first-of-type {
+    margin-right: 10px;
+}
+#about .content button img {
+    width: 20px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+#about .content button p {
+    display: inline;
+    font-size: 12px;
+}
+/* -- content --*/
+/* -- Media --*/
+@media screen and (max-width: 992px) {
+    #about .container .box {
+        width: 45%;
+    }
+    #about .container .content {
+        width: 50%;
+        padding-left: 30px;
+    }
+}
+@media screen and (max-width: 768px) {
+    #about .container .box,
+    #about .container .content {
+        float: none;
+        width: 90%;
+        margin: auto;
+        /* background-color: #000; */
+    }
+    #about .container .box .box-prof {
+        margin: auto;
+        width: 80%;
+        box-shadow: none;
+    }
+    #about .container .box .box-prof .img-overlay {
+        transform: translate(0, 0);
+    }
+    #about .container .content {
+        width: 80%;
+        padding: 30px;
+    }
+    #about .container .content ul li {
+        float: none;
+        width: 100%;
+        margin-block: 20px;
+    }
+}
+
+/* -- Media --*/
+/* End About -------------------------------------------- ----*/
+/* Start Our Services ----------------------------------- ----*/
+#our-serv {
+    background-color: #f1f1f1;
+    padding: 60px 0;
+}
+#our-serv .container,
+#our-portfolio .container {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+/* -- Content --*/
+#our-serv .content {
+    margin-top: 80px;
+    width: 100%;
+}
+#our-serv .content .serv {
+    width: 25%;
+    padding: 40px 15px;
+    float: left;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+#our-serv .content .serv:hover {
+    background-color: #fff;
+    box-shadow: 0 15px 20px rgb(0 0 0 / 10%);
+}
+#our-serv .content .serv img {
+    width: 35px;
+    transition: 0.5s;
+}
+#our-serv .content .serv:hover img {
+    transform: scale(1.2);
+}
+#our-serv .content .serv h3 {
+    margin-block: 20px;
+}
+#our-serv .content .serv p {
+    color: #555;
+}
+/* -- Content --*/
+
+/* -- Media --*/
+@media screen and (max-width: 992px) {
+    #our-serv .content .serv {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-width: 767px) {
+    #our-serv .content .serv {
+        width: 70%;
+        margin: 0px auto 20px;
+        float: none;
+    }
+}
+/* -- Media --*/
+/* End Our Services   ----------------------------------- ----*/
+/* Start Our Portfolio ---------------------------------- ----*/
+#our-portfolio {
+    padding: 60px 0;
+}
+/* -- Content == */
+#our-portfolio .content .catg-btns {
+    /* background-color: #ff305b; */
+    margin-top: 50px;
+}
+
+#our-portfolio .content .btn {
+    background-color: transparent;
+    border: none;
+    font-size: 17px;
+    margin: 10px;
+}
+#our-portfolio .content .catg-photo {
+    margin-top: 50px;
+}
+#our-portfolio .content .catg-photo .item {
+    float: left;
+    width: 33.333%;
+    padding: 15px;
+}
+
+#our-portfolio .content .catg-photo .item-inner {
+    position: relative;
+}
+#our-portfolio .content .catg-photo .item-inner span {
+    width: 25px;
+    height: 25px;
+    display: block;
+    background-color: #ec2403;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0;
+    transition: 0.5s 0.2s;
+    z-index: 5;
+}
+#our-portfolio .content .catg-photo .item-inner::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(0 0 0 / 60%);
+    opacity: 0;
+    transition: 0.5s;
+}
+#our-portfolio .content .catg-photo .item-inner:hover::after,
+#our-portfolio .content .catg-photo .item-inner:hover span {
+    opacity: 1;
+}
+#our-portfolio .content .catg-photo .item-inner img {
+    width: 100%;
+}
+/* -- Content -- */
+/* -- Media --*/
+@media screen and (max-width: 992px) {
+    #our-portfolio .content .catg-photo .item {
+        width: 50%;
+    }
+}
+@media screen and (max-width: 767px) {
+    #our-portfolio .content .catg-photo .item {
+        width: 80%;
+        margin: 0px auto;
+        float: none;
+    }
+}
+/* -- Media --*/
+/* End Our Portfolio   ---------------------------------- ----*/
+/* Start Fun Facts     ---------------------------------- ----*/
+#fun-facts {
+    padding: 80px 0;
+    background-color: #f1f1f1;
+}
+#fun-facts .container {
+    width: 90%;
+    margin: auto;
+}
+#fun-facts .container .fact {
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+#fun-facts .container .fact img {
+    width: 30px;
+}
+#fun-facts .container .fact h3 {
+    font-size: 25px;
+    font-weight: 900;
+    margin-block: 15px;
+}
+#fun-facts .container .fact p {
+    color: #555;
+}
+@media screen and (max-width: 767px) {
+    #fun-facts .container .fact {
+        width: 80%;
+        margin: 50px auto;
+        float: none;
+    }
+}
+/* End Fun Facts            ---------------------------------- ----*/
+/* Start Client's Feedback  ---------------------------------- ----*/
+#client-feedback {
+    padding: 50px 0;
+}
+
+#client-feedback .content {
+    width: 90%;
+    margin: 80px auto 50px;
+    position: relative;
+}
+#client-feedback .content .testimonials {
+    width: 80%;
+    margin: auto;
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+#client-feedback .testimonials .testimonial {
+    width: 100%;
+    background: #f1f1f1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 50px 20px 50px 30px;
+    overflow: hidden;
+    z-index: 1;
+    float: left;
+    transform: translateX(0);
+    transition: 1s;
+}
+#client-feedback .testimonials .testimonial:nth-of-type(2) {
+    transform: translateX(1200px);
+}
+#client-feedback .testimonials .testimonial::before {
+    content: "";
+    position: absolute;
+    top: -125px;
+    left: -125px;
+    width: 250px;
+    height: 250px;
+    background-color: #ff305b;
+    transform: rotate(45deg);
+    z-index: -1;
+}
+#client-feedback .testimonials .testimonial .img-prof {
+    width: 15%;
+    float: left;
+    border-radius: 50%;
+    overflow: hidden;
+}
+#client-feedback .testimonials .testimonial .img-prof img {
+    width: 100%;
+}
+#client-feedback .testimonials .testimonial .testimonial-content {
+    float: left;
+    width: 85%;
+    padding-left: 30px;
+}
+#client-feedback .testimonials .testimonial .testimonial-content h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+#client-feedback .testimonials .testimonial .testimonial-content .location p {
+    display: inline-block;
+    font-size: 13px;
+}
+#client-feedback .testimonials .testimonial .testimonial-content > p {
+    margin-block: 15px;
+    font-size: 18px;
+    font-style: italic;
+    color: #555;
+    font-weight: 500;
+}
+#client-feedback .content img {
+    width: 15px;
+    vertical-align: middle;
+}
+
+/* --- Slider btn  --- */
+#client-feedback .content button {
+    z-index: 655;
+    background-color: #fff;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid #ff305b;
+    transition: 0.3s;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#client-feedback .content button:nth-of-type(2) {
+    width: 35px;
+    border-radius: 5px;
+    background-color: #ff305b;
+    transform: translateX(-45px);
+}
+#client-feedback .content button:nth-of-type(1):hover {
+    width: 35px;
+    border-radius: 5px;
+    background-color: #ff305b;
+    margin-right: 5px;
+}
+#client-feedback .content button:nth-of-type(1):hover ~ button:nth-of-type(2) {
+    width: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    transform: translateX(-35px);
+}
+#client-feedback .content button:nth-of-type(1):hover ~ .testimonial:nth-of-type(2) {
+    transform: translate(0);
+}
+#client-feedback .content button:nth-of-type(1):hover ~ .testimonial:nth-of-type(1) {
+    transform: translate(-1200px);
+}
+
+/* --- Slider btn  --- */
+
+/* -- Media --*/
+@media screen and (max-width: 768px) {
+    #client-feedback .content {
+        width: 90;
+    }
+    #client-feedback .content .testimonials {
+        height: 450px;
+    }
+    #client-feedback .testimonials .testimonial {
+        padding: 30px 15px;
+    }
+    #client-feedback .testimonials .testimonial .img-prof {
+        margin: auto;
+        float: none;
+        width: 25%;
+    }
+    #client-feedback .testimonials .testimonial .testimonial-content {
+        float: none;
+        width: 100%;
+        margin-top: 30px;
+        padding: 0;
+    }
+    #client-feedback .content button {
+        top: 90%;
+    }
+
+    /* --- Slider --- */
+    #client-feedback .testimonials .testimonial:nth-of-type(2) {
+        transform: translateX(500px);
+    }
+    #client-feedback .content button:nth-of-type(1):hover ~ .testimonial:nth-of-type(1) {
+        transform: translate(-500px);
+    }
+    /* --- Slider --- */
+}
+/* -- Media --*/
+/* End Client's Feedback    ---------------------------------- ----*/
+/* Start Our Blog           ---------------------------------- ----*/
+#our-blog {
+    padding: 50px 0;
+    background-color: #f1f1f1;
+}
+#our-blog .content {
+    width: 90%;
+    margin: 50px auto;
+}
+#our-blog .content .blog {
+    float: left;
+    width: 33.33%;
+    padding: 0 20px;
+}
+#our-blog .content .blog-c {
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: #fff;
+}
+#our-blog .content .blog-c img {
+    width: 100%;
+}
+#our-blog .content .blog-c .blog-content {
+    padding: 15px;
+}
+#our-blog .content .blog-c .blog-content a {
+    font-size: 17px;
+    font-weight: 600;
+    color: #000;
+    transition: color 0.3s;
+}
+#our-blog .content .blog-c .blog-content a:last-child {
+    font-size: 14px;
+    font-weight: 500;
+}
+#our-blog .content .blog-c .blog-content a:hover {
+    color: #ff305b;
+}
+#our-blog .content .blog-c .blog-content p:not(p:last-child) {
+    color: #555;
+    margin-block: 10px;
+    line-height: 1.2;
+}
+@media screen and (max-width: 768px) {
+    #our-blog .content {
+        width: 70;
+    }
+    #our-blog .content .blog {
+        float: none;
+        width: 100%;
+        padding: 20px 50px;
+    }
+}
+/* End Our Blog             ---------------------------------- ----*/
+/* Start Contact Us         ---------------------------------- ----*/
+#contact-us {
+    padding: 30px 0;
+}
+#contact-us .content {
+    margin-top: 80px;
+    width: 60%;
+    margin-inline: auto;
+}
+#contact-us .content input,
+#contact-us .content form textarea {
+    padding: 15px;
+    border-radius: 4px;
+    outline: none;
+    color: #555;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+}
+#contact-us .content input:hover,
+#contact-us .content form textarea:hover {
+    border-color: #a94442;
+}
+#contact-us .content .name-email {
+    margin-bottom: 20px;
+}
+#contact-us .content .name-email input {
+    float: left;
+    width: 48%;
+}
+#contact-us .content .name-email input:nth-child(2) {
+    float: right;
+}
+#contact-us .content form > input:first-of-type {
+    width: 100%;
+    display: block;
+}
+#contact-us .content form textarea {
+    margin-block: 20px;
+    width: 100%;
+}
+#contact-us .content form > input:last-of-type {
+    background-color: #ff305b;
+    padding: 15px 25px;
+    color: #fff;
+    border: none;
+}
+#contact-us .content form > input:last-of-type:hover {
+    background-color: #ec2403;
+}
+
+/* -- Media -- */
+@media screen and (max-width: 991px) {
+    #contact-us .content {
+        width: 85%;
+    }
+}
+@media screen and (max-width: 768px) {
+    #contact-us .content {
+        padding-inline: 50px;
+    }
+    #contact-us .content .name-email input {
+        float: none;
+        width: 100%;
+        margin-block: 20px;
+    }
+}
+/* -- Media -- */
+/* End Contact Us           ---------------------------------- ----*/
+/* Start Footer             ---------------------------------- ----*/
+.footer {
+    padding: 50px;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+}
+.footer .social-icon {
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.footer p span {
+    color: #ff305b;
+}
+/* End Footer               ---------------------------------- ----*/
